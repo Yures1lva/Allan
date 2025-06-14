@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
 //Tipo...nomeVar...valorVar...Texto-String
   /*   String userName = "Paulo";
@@ -36,7 +38,7 @@ void main() {
 
  
   Aula sobre Switch case
-   */
+   
 
   int dia = 5;
   int a = 2;
@@ -62,4 +64,48 @@ void main() {
     default:
       print("Outro dia");
   }
+
+  
+
+  //parametro (daclaração de variavel; limite, até onde ele vai ; i = i + 1 incrementar )
+
+  for (int i = 1; i <= 2; i++) {
+    print(i);
+  }
+
+  int j = 1;
+
+  do {
+    print("Valor de J é: $j");
+    j++;
+  } while (j <= 10);
+*/
+
+  //tipo nomeDaFunção (parametro da função) {corpo}
+  void dizerOla(String nome) {
+    print("Olá $nome");
+  }
+
+  dizerOla("Allan");
+
+  //tipo nomeDaFunção (parametro da função) {corpo}
+  int dobrar(int numero) {
+    return numero * 2;
+  }
+
+  //tipo nomeDaFunção (parametro da função) {corpo}
+  String somaDeNomes(String nome) {
+    return nome + " da Silva";
+  }
+
+  print(dobrar(2));
+  print(dobrar(4));
+
+  stdout.write("Digite um nome:");
+  String? nome = stdin.readLineSync();
+
+  print(nome);
+  String nome2 = somaDeNomes("Allan");
+
+  print("$nome $nome2");
 }
