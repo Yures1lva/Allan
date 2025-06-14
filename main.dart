@@ -1,6 +1,6 @@
 void main() {
 //Tipo...nomeVar...valorVar...Texto-String
-  String userName = "Paulo";
+  /*   String userName = "Paulo";
   int idade = 35;
   double altura = 1.80;
   bool estudando = true;
@@ -34,7 +34,32 @@ void main() {
     print("senha incorreta");
   }
 
-  /*   
+ 
   Aula sobre Switch case
    */
+
+  int dia = 5;
+  int a = 2;
+  int b = 2;
+
+  switch (dia) {
+    case 1:
+      print("Domingo");
+      break;
+    case 2:
+      print("Segunda");
+      break;
+    case 3:
+      print("Terça");
+      print(a + b);
+      break;
+    case 4:
+      print("Quarta");
+      break;
+    case 5:
+      print("Quinta");
+      break;
+    default:
+      print("Outro dia");
+  }
 }
