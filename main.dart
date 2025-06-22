@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 void main() {
@@ -79,7 +80,7 @@ void main() {
     print("Valor de J é: $j");
     j++;
   } while (j <= 10);
-*/
+
 
   //tipo nomeDaFunção (parametro da função) {corpo}
   void dizerOla(String nome) {
@@ -108,4 +109,40 @@ void main() {
   String nome2 = somaDeNomes("Allan");
 
   print("$nome $nome2");
+
+
+
+  double calcularIMC(double peso, double altura) {
+    return peso / (altura * altura);
+  }
+
+  double peso = 120;
+  double altura = 1.80;
+
+  double imc = calcularIMC(peso, altura);
+
+  if (imc < 18.5) {
+    print("Seu IMC é de : $imc, Você está abaixo do peso");
+  } else if (imc > 18.5 && imc < 24.9) {
+    print("Seu IMC é de : $imc, Você está com peso normal");
+  } else if (imc > 25 && imc < 29.9) {
+    print("Seu IMC é de : $imc, Você está com sobrepeso");
+  } else if (imc > 30) {
+    print("Seu IMC é de : $imc, Você está com obesidade");
+  } else {
+    print("seu imc é de: $imc");
+  }
+
+  //índice.....................  0       1        2       3
+  List<String> ListaDeNomes = ["Joao", "Paulo", "Ana"];
+
+  // ListaDeNomes.remove("Lucas");
+
+  final existe = ListaDeNomes.contains("Lucas");
+
+  if (existe) {
+    print("Lucas está na lista");
+  } else {
+    print("Lucas não está na lista");
+  }  */
 }
