@@ -1,8 +1,9 @@
 import 'dart:async';
+import 'dart:ffi';
 import 'dart:io';
 
 void main() {
-//Tipo...nomeVar...valorVar...Texto-String
+  //Tipo...nomeVar...valorVar...Texto-String
   /*   String userName = "Paulo";
   int idade = 35;
   double altura = 1.80;
@@ -118,7 +119,6 @@ void main() {
 
   double peso = 120;
   double altura = 1.80;
-
   double imc = calcularIMC(peso, altura);
 
   if (imc < 18.5) {
@@ -133,6 +133,7 @@ void main() {
     print("seu imc é de: $imc");
   }
 
+
   //índice.....................  0       1        2       3
   List<String> ListaDeNomes = ["Joao", "Paulo", "Ana"];
 
@@ -144,5 +145,70 @@ void main() {
     print("Lucas está na lista");
   } else {
     print("Lucas não está na lista");
-  }  */
+  }
+
+
+//estrutura de dados com dart - Map e Set, um pouco sobre Json
+  Map<String, dynamic> estrutura = {
+    "nome": "Allan",
+    "idade": 25,
+    "ativo": true,
+  };
+
+  estrutura["email"] = 'allan@gmail.com';
+
+  estrutura.forEach((chave, valor) {
+    print("$chave: $valor");
+  });
+
+  Set<String> emails = {"a@email.com", "b@email.com"};
+  emails.add("c@email.com");
+
+  print(emails);
+
+  //POO Programação Orientada a Objetos...........................
+
+  //instanciar.....................................................
+  Pessoa p1 = Pessoa("Allan", 25);
+
+  p1.dizerOla();
+
+*/
+
+  List<Produto> estoque = [];
+
+  estoque.add(Produto("Arroz", 4.5, 10));
+  estoque.add(Produto("Feijão", 7.5, 4));
+  estoque.add(Produto("Macarrão", 2.5, 3));
+
+  for (var produto in estoque) {
+    produto.mostrar();
+  }
+}
+//final da main..........
+
+class Produto {
+  String nome;
+  double preco;
+  int quantidade;
+
+  Produto(this.nome, this.preco, this.quantidade);
+
+  void mostrar() {
+    print(
+      "Produto: $nome | Preço: R\$${preco.toStringAsFixed(2)} | Quantidade: $quantidade",
+    );
+  }
+}
+
+class Pessoa {
+  String nome = "";
+  int idade = 0;
+
+  //construtor.....................................................
+  Pessoa(this.nome, this.idade);
+
+  void dizerOla() {
+    print("Olá meu nome é $nome e tenho $idade anos");
+  }
 }
